@@ -19,7 +19,7 @@ FORM is a fictional brand created for this design study. It is not a real brand,
 | **Brand** | FORM |
 | **Persona** | minimal |
 | **Live Site** | [torifo.github.io/design-apparel-minimal](https://torifo.github.io/design-apparel-minimal/) |
-| **Custom Domain** | `design-apparel-minimal.riumu.net` *(planned — not yet active)* |
+| **Custom Domain** | `design.apparel-minimal.riumu.net` *(planned — not yet active)* |
 
 ## Design Concept
 
@@ -64,7 +64,7 @@ FORMは、このデザイン研究のために作成した架空ブランドで�
 | **ブランド** | FORM |
 | **ペルソナ** | minimal |
 | **公開URL** | [torifo.github.io/design-apparel-minimal](https://torifo.github.io/design-apparel-minimal/) |
-| **独自ドメイン** | `design-apparel-minimal.riumu.net` *（設定予定・現在未割り当て）* |
+| **独自ドメイン** | `design.apparel-minimal.riumu.net` *（設定予定・現在未割り当て）* |
 
 ## デザインコンセプト
 
