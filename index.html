@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORM — Quiet structure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAFAFA;
+      --bg-sub: #F4F4F4;
+      --bg-dark: #111111;
+      --fg: #111111;
+      --fg-muted: #888888;
+      --border: #E0E0E0;
+      --accent: #D4C4A8;
+      --accent-dark: #8A7A60;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'Outfit', 'Noto Sans JP', sans-serif;
+      --ease: cubic-bezier(.4,0,.2,1);
+    }
+    html {
+      scroll-behavior: smooth;
+      line-break: strict;
+      overflow-wrap: anywhere;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.55;
+      overflow-x: hidden;
+      animation: appear .6s var(--ease) both;
+    }
+    @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    nav {
+      min-height: 72px;
+      padding: 1.2rem clamp(1.5rem, 4vw, 4rem);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo, h1, h2 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: .86;
+    }
+    .logo { font-size: 2rem; }
+    .nav-links { display: flex; gap: clamp(1rem, 3vw, 2.6rem); font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--fg-muted); }
+    .section { padding: 8rem 4rem; border-bottom: 1px solid var(--border); }
+    .hero {
+      min-height: calc(100svh - 72px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 7rem 4rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      background: var(--border);
+    }
+    .hero::before { left: 4rem; right: 4rem; top: 42%; height: 1px; }
+    .hero::after { right: 17vw; top: 7rem; bottom: 4rem; width: 1px; }
+    .hero { position: relative; }
+    h1 { font-size: clamp(6rem, 20vw, 18rem); }
+    .hero-row {
+      display: grid;
+      grid-template-columns: minmax(220px, .72fr) minmax(540px, 1.28fr);
+      gap: 4rem;
+      align-items: end;
+      color: var(--fg-muted);
+      max-width: 1180px;
+    }
+    .hero-row p,
+    .label,
+    .price,
+    dd,
+    .feature-copy p,
+    footer,
+    .nav-links {
+      -webkit-text-stroke: .22px currentColor;
+      text-shadow: 0 0 0 currentColor;
+    }
+    .hero-row p:last-child {
+      -webkit-text-stroke-width: .28px;
+    }
+    .measure-strip {
+      position: absolute;
+      right: 4rem;
+      bottom: 9rem;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 1.2rem;
+      color: var(--fg-muted);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .measure-strip span {
+      padding-top: .4rem;
+      border-top: 1px solid var(--border);
+      -webkit-text-stroke: .18px currentColor;
+      text-shadow: 0 0 0 currentColor;
+    }
+    .label { font-size: .72rem; text-transform: uppercase; letter-spacing: .16em; color: var(--fg-muted); margin-bottom: 2rem; }
+    h2 { font-size: clamp(4rem, 12vw, 10rem); }
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .product { background: var(--bg); }
+    .product-img { aspect-ratio: 3/4; overflow: hidden; background: var(--bg-sub); }
+    .product img { filter: grayscale(100%) contrast(1.1); transition: transform .4s var(--ease); }
+    .product:hover img { transform: scale(1.02); }
+    .product-info {
+      min-height: 96px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: .9rem;
+    }
+    .price { color: var(--fg-muted); }
+    .philosophy {
+      background: var(--bg-dark);
+      color: var(--bg);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    .philosophy p { max-width: 34rem; color: #cfcfcf; font-size: 1rem; }
+    .materials-grid {
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    .material {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      padding: 1.3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    dt { font-weight: 400; }
+    dd { color: var(--fg-muted); }
+    .feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+    }
+    .feature-img {
+      aspect-ratio: 16/10;
+      background: var(--bg-sub);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .feature-img img { filter: grayscale(100%) contrast(1.05); }
+    .feature-copy p { max-width: 32rem; color: var(--fg-muted); margin-top: 1.5rem; }
+    footer {
+      padding: 2.4rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--fg-muted);
+      font-size: .86rem;
+    }
+    .reveal { opacity: 0; transition: opacity .6s var(--ease); }
+    .reveal.in { opacity: 1; }
+    @media (max-width: 760px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links a:nth-child(n+3) { display: none; }
+      .hero { padding: 5rem 1.5rem 2rem; min-height: calc(100svh - 64px); }
+      .hero::before { left: 1.5rem; right: 1.5rem; top: 44%; }
+      .hero::after { right: 1.5rem; top: 5rem; bottom: 2rem; }
+      .measure-strip { position: static; grid-template-columns: 1fr; gap: .45rem; margin-top: 2rem; }
+      .section { padding: 5rem 1.5rem; }
+      .hero-row, .philosophy, .feature { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-row p:last-child { white-space: normal; }
+      .collection-grid { grid-template-columns: repeat(2, 1fr); }
+      .product-info { display: block; min-height: 92px; }
+      .material { grid-template-columns: 1fr; gap: .35rem; }
+      footer { padding: 2rem 1.5rem; display: block; }
+    }
+  </style>
+</head>
+<body>
+  <nav><a class="logo" href="#">FORM</a><div class="nav-links"><a href="#collection">Collection</a><a href="#philosophy">Philosophy</a><a href="#materials">Materials</a><a href="#">Cart 0</a></div></nav>
+  <main>
+    <section class="hero">
+      <div><p class="label">Quiet Luxury / SS 2026</p><h1>FORM</h1></div>
+      <div class="measure-strip" aria-hidden="true"><span>shoulder 48</span><span>hem 62</span><span>wool 92</span></div>
+      <div class="hero-row"><p>Clothing reduced to line, fabric, proportion.</p><p>余白、輪郭、素材だけで成立する服。装飾を足さず、必要な構造だけを残す。</p></div>
+    </section>
+    <section class="section" id="collection">
+      <p class="label">Collection</p>
+      <div class="collection-grid reveal">
+        <article class="product"><div class="product-img"><img src="https://picsum.photos/seed/form1/640/853" alt="Structured shirt"></div><div class="product-info"><span>Structured Shirt</span><span class="price">¥18,000</span></div></article>
+        <article class="product"><div class="product-img"><img src="https://picsum.photos/seed/form2/640/853" alt="Wool straight trouser"></div><div class="product-info"><span>Wool Straight Trouser</span><span class="price">¥24,000</span></div></article>
+        <article class="product"><div class="product-img"><img src="https://picsum.photos/seed/form3/640/853" alt="Cotton shell coat"></div><div class="product-info"><span>Cotton Shell Coat</span><span class="price">¥42,000</span></div></article>
+        <article class="product"><div class="product-img"><img src="https://picsum.photos/seed/form4/640/853" alt="Fine knit top"></div><div class="product-info"><span>Fine Knit Top</span><span class="price">¥16,000</span></div></article>
+      </div>
+    </section>
+    <section class="section philosophy" id="philosophy">
+      <div><p class="label">Philosophy</p><h2>LESS,<br>TRUE.</h2></div>
+      <p>余分な装飾を削り、身体と空間の間に残る線だけを見る。FORMは、長く着るための静かな構造です。</p>
+    </section>
+    <section class="section" id="materials">
+      <p class="label">Materials</p><h2>FABRIC<br>INDEX</h2>
+      <dl class="materials-grid reveal">
+        <div class="material"><dt>Organic Cotton</dt><dd>Wakayama, Japan</dd><dd>Dense, dry touch, washable.</dd></div>
+        <div class="material"><dt>Fine Wool</dt><dd>Ichinomiya, Japan</dd><dd>Soft drape, natural temperature control.</dd></div>
+        <div class="material"><dt>Linen Blend</dt><dd>Shiga, Japan</dd><dd>Structured surface, low sheen.</dd></div>
+      </dl>
+    </section>
+    <section class="section feature">
+      <div class="feature-img reveal"><img src="https://picsum.photos/seed/form-feature/1200/750" alt="FORM feature product"></div>
+      <div class="feature-copy"><p class="label">Focus</p><h2>SHELL<br>COAT</h2><p>一枚の布を建築的に扱う。肩線を抑え、前立てを細く、ポケットを線の中へ収めた全天候型コート。</p></div>
+    </section>
+  </main>
+  <footer><span>© 2026 FORM</span><span>Design Study — apparel-minimal / 架空ブランド</span></footer>
+  <script>
+    const io = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+    }), { threshold: .1, rootMargin: '0px 0px -40px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
