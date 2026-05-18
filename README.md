@@ -4,7 +4,7 @@
 
 <a id="english"></a>
 
-# FORM — apparel-minimal
+# FORM — design-apparel-minimal
 
 > **"Only what remains"**
 
@@ -18,8 +18,8 @@ FORM is a fictional brand created for this design study. It is not a real brand,
 |---|---|
 | **Brand** | FORM |
 | **Persona** | minimal |
-| **Live Site** | [torifo.github.io/apparel-minimal](https://torifo.github.io/apparel-minimal/) |
-| **Custom Domain** | `design.apparel-minimal.riumu.net` *(planned — not yet active)* |
+| **Live Site** | [torifo.github.io/design-apparel-minimal](https://torifo.github.io/design-apparel-minimal/) |
+| **Custom Domain** | `design-apparel-minimal.riumu.net` *(planned — not yet active)* |
 
 ## Design Concept
 
@@ -40,16 +40,16 @@ This repository is one of four design studies under the **apparel persona series
 
 | Persona | Brand | Repo |
 |---------|-------|------|
-| trend | LUEUR | [apparel-trend](https://github.com/torifo/apparel-trend) |
-| street | ARCH | [apparel-street](https://github.com/torifo/apparel-street) |
-| vintage | FRAY | [apparel-vintage](https://github.com/torifo/apparel-vintage) |
-| minimal | FORM | [apparel-minimal](https://github.com/torifo/apparel-minimal) |
+| trend | LUEUR | [design-apparel-trend](https://github.com/torifo/design-apparel-trend) |
+| street | ARCH | [design-apparel-street](https://github.com/torifo/design-apparel-street) |
+| vintage | FRAY | [design-apparel-vintage](https://github.com/torifo/design-apparel-vintage) |
+| minimal | FORM | [design-apparel-minimal](https://github.com/torifo/design-apparel-minimal) |
 
 ---
 
 <a id="japanese"></a>
 
-# FORM — apparel-minimal（日本語）
+# FORM — design-apparel-minimal（日本語）
 
 > **「残るものだけを」**
 
@@ -63,8 +63,8 @@ FORMは、このデザイン研究のために作成した架空ブランドで�
 |---|---|
 | **ブランド** | FORM |
 | **ペルソナ** | minimal |
-| **公開URL** | [torifo.github.io/apparel-minimal](https://torifo.github.io/apparel-minimal/) |
-| **独自ドメイン** | `design.apparel-minimal.riumu.net` *（設定予定・現在未割り当て）* |
+| **公開URL** | [torifo.github.io/design-apparel-minimal](https://torifo.github.io/design-apparel-minimal/) |
+| **独自ドメイン** | `design-apparel-minimal.riumu.net` *（設定予定・現在未割り当て）* |
 
 ## デザインコンセプト
 

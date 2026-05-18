@@ -1,4 +1,4 @@
-# FORM — apparel-minimal Spec
+# FORM — design-apparel-minimal Spec
 
 **Status:** Approved  
 **Author:** torifo  
@@ -22,7 +22,7 @@
 
 ### Background
 - FORMは本デザイン研究のために作成した架空ブランドであり、実在のブランド・店舗・商品ではない
-- `apparel-minimal` リポジトリ、`design.apparel-minimal.riumu.net` 独自ドメイン予定
+- `design-apparel-minimal` リポジトリ、`design-apparel-minimal.riumu.net` 独自ドメイン予定
 - 同シリーズで最もアニメーション量が少ない。制約が設計の核
 
 ---
@@ -181,7 +181,7 @@ index.html
 |---|----------|-------|-----|--------|
 | 1 | Hero のテキストは「FORM」のみか、サブテキストを加えるか | torifo | 実装時 | Open |
 | 2 | Philosophyセクションのステートメント文言（日本語か英語か） | torifo | 実装時 | Open |
-| 3 | `design.apparel-minimal.riumu.net` のDNS設定タイミング | torifo | 後日 | Open |
+| 3 | `design-apparel-minimal.riumu.net` のDNS設定タイミング | torifo | 後日 | Open |
 
 ---
 
