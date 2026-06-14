@@ -34,6 +34,21 @@ FORM is a fictional brand created for this design study. It is not a real brand,
 - Google Fonts CDN
 - No framework, no build step — GitHub Pages ready
 
+## Install as a skill / スキルとして導入
+
+This repo ships a cross-agent **`SKILL.md`** (open standard) usable by both Claude Code and Codex CLI as a design-reference skill. Link the repo into the agent's skills directory:
+
+このリポジトリは Claude Code / Codex CLI 共通の **`SKILL.md`**（オープン標準）を同梱し、デザイン参照スキルとして使えます。リポジトリをスキルディレクトリへリンクするだけです。
+
+```bash
+# Claude Code
+ln -s "$(pwd)" ~/.claude/skills/design-apparel-minimal
+# Codex CLI
+ln -s "$(pwd)" ~/.codex/skills/design-apparel-minimal
+```
+
+Restart the agent; it is matched automatically by the skill's `description` (skill name: `design-apparel-minimal`). / エージェント再起動後、`description` に基づき自動マッチします。
+
 ## Part of
 
 This repository is one of four design studies under the **apparel persona series**:
